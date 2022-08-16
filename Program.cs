@@ -79,6 +79,10 @@ public class Hotdog
     // aka a variable that only belong to this object
     int energy; // default private
 
+    string meat = "beef";
+    float temperature;
+    Color color;
+
     // constructor
     public Hotdog() {
         Console.WriteLine("constructed a hotdog object");
@@ -86,6 +90,7 @@ public class Hotdog
     }
 
     // method
+    // void means it is going to work in the background and not return an integer
     public void TakeBite() {
         energy -= 5;
     }
