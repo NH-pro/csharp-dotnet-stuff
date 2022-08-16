@@ -60,4 +60,38 @@ for (int i = 0; i < 3; i++) {
 }
 
 
+
+Hotdog chicago = new Hotdog(); // create an instance of this class
+Hotdog corndog = new Hotdog(); // create an instance of this class
+
+Console.WriteLine(chicago.GetEnergy()); // 20
+chicago.TakeBite();
+Console.WriteLine(chicago.GetEnergy()); // 15
+
+Console.WriteLine("Our corndog energy is:" + corndog.GetEnergy()); // 20
+
+
 // Make a class
+// public, private, internal, readonly, static...
+public class Hotdog
+{
+    // fields
+    // aka a variable that only belong to this object
+    int energy; // default private
+
+    // constructor
+    public Hotdog() {
+        Console.WriteLine("constructed a hotdog object");
+        energy = 20;
+    }
+
+    // method
+    public void TakeBite() {
+        energy -= 5;
+    }
+
+    // getter
+    public int GetEnergy() {
+        return energy;
+    }
+}
